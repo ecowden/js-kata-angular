@@ -7,7 +7,7 @@
     <option indent="4" />
     <option maxerr="50" />
     <option plusplus="true" />
-    <option predef="beforeEach, describe, expect, it, jasmine, inject, module" />
+    <option predef="beforeEach, describe, expect, it, jasmine, inject, module, dump" />
   </component>
 </project>
 
