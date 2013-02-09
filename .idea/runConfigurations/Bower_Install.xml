@@ -1,5 +1,5 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="Bower Install" type="NodeJSConfigurationType" factoryName="Node.js" singleton="true" path-to-node="/usr/local/bin/node" path-to-js-file="/usr/local/share/npm/lib/node_modules/bower/bin/bower" application-parameters="install" working-dir="$PROJECT_DIR$">
+  <configuration default="false" name="Bower Install" type="NodeJSConfigurationType" factoryName="Node.js" singleton="true" path-to-node="/usr/local/bin/node" path-to-js-file="/usr/local/share/npm/lib/node_modules/bower/bin/bower" application-parameters="install" working-dir="$PROJECT_DIR$" coffeescript-run="false">
     <RunnerSettings RunnerId="NodeJS.run" />
     <ConfigurationWrapper RunnerId="NodeJS.run" />
     <method />
