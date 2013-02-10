@@ -13,21 +13,26 @@ editors as well.
 
 ### Before starting
  1. Install [Node.js](http://nodejs.org/)
- 1. Install Testacular
+ 1. Install [Testacular](http://vojtajina.github.com/testacular/).  We'll use this for running tests.
 
         npm install -g testacular
 
- 1. Install Bower
+ 1. Install [Bower](https://github.com/twitter/bower).  We'll use this for grabbing dependencies.
 
         npm install -g bower
 
 ### Set up the project
- 1. Get the project.  The simplest way is to download the zip archive.  Advanced users are free to fork the
-    repository.
- 1. Open it in your IDE of choice.
- 1. Grab dependencies with Bower.  For IntelliJ IDEA users, there is a build config for this.  For all others:
+ 1. Get the project.  The simplest way is to download the project as a zip archive from GitHub.  Advanced users are
+    free to perform a git clone.  Really advanced users may want to create a fork.
+ 1. Open the project in your IDE of choice.  Everything should be set up already for IntelliJ IDEA users.
+ 1. Use Bower to grab dependencies.  For IntelliJ IDEA users,
+    there is a build config for this.  For all others:
 
         bower install
+
+ 1. Verify the Bower install operation by checking for a 'components' directory in the project.  Inside it should be
+    directories for both 'angular' and 'sugar.'  Some users have reported needing to run Bower twice the first
+    time they use it.
 
 ### To start testing
 
@@ -42,7 +47,7 @@ One you start the Testacular runner, it should watch for changes and continuousl
 
  1. I'm getting weird errors when I try to npm install anything.  Also, I'm on a *nix platform.
 
-    You may need to invoke the command with sudo.  This should not happen on MacOS if installed Node using Homebrew.
+    You may need to invoke the command with sudo.  This should not happen on MacOS if you installed Node using Homebrew.
 
  1. I installed Testacular and Bower via NPM, but it can't find them when I run them.
 
@@ -61,8 +66,17 @@ One you start the Testacular runner, it should watch for changes and continuousl
           brew install phantomjs
     * - OR - edit testacular.conf.js.  Set the "browsers" element to the browser or browsers of your choice.
 
+ 1. I tried 'bower install,' but it didn't create a 'components' directory in my project.
+
+    First, sometimes the IDE does not immediately pick up file changes that happen outside of it.  Check for the
+    directory outside of the IDE using Finder/Explorer/Terminal/etc.
+
+    Second, some users have reported that their very first 'bower install' doesn't work.  Try running it a second time,
+    just in case.
+
 ### Notes for Posterity
 
-1. We grab Angular via the ZIP distribution provided by Google.  It would be nice if there were a good Bower
-   repository for it, but, alas, there's a bunch that have different things, they're all out of date and
-   none of them have the testing files.  As such, you'll need to continuously update the version manually.
+1. We have configured Bower to grab Angular via the ZIP distribution provided by Google.  It would be nice if
+   there were a good Bower repository for it, but, alas, there's a bunch that have different things, they're
+   all out of date and none of them have the testing files.  As such, you'll need to update the
+   version manually in the component.json file.
